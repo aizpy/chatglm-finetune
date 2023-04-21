@@ -154,7 +154,7 @@ def collate_fn(batch):
 
 
 train_data = []
-with open("data/qa.json") as file:
+with open("data/qa.json", encoding="utf-8") as file:
     train_data = json.load(file)
 
 from transformers import TrainingArguments, Trainer
