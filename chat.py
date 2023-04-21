@@ -12,8 +12,9 @@ model = load_lora_config(model)
 model.load_state_dict(torch.load(f"output/chatglm-6b-lora.pt"), strict=False)
 model.half().cuda().eval()
 
+history = []
+
 while True:
-    history = []
     print("[User]: ")
     msg = input()
     try:
